@@ -17,3 +17,42 @@
 
 <%= link_to 'Edit', edit_dealership_path(@dealership) %> |
 <%= link_to 'Back', dealerships_path %>
+
+<hr>
+ <h1>New inventory</h1>
+
+<%= render 'inventories/form' %>
+
+<hr>
+
+<h1>Listing inventories</h1>
+
+<table>
+  <tr>
+    <th>Carmodel</th>
+    <th>Price</th>
+    <th>Status</th>
+    <th>Dealership</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dealership.inventories.each do |inventory| %>
+<% if inventory.persisted? %>
+  <tr>
+    <td><%= inventory.carmodel %></td>
+    <td><%= inventory.price %></td>
+    <td><%= inventory.status %></td>
+    <td><%= inventory.dealership %></td>
+    <td><%= link_to 'Show', [inventory.dealership, inventory] %></td>
+    <td><%= link_to 'Edit', edit_dealership_inventory_path(inventory.dealership, inventory) %></td>
+    <td><%= link_to 'Destroy', [inventory.dealership, inventory], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+  <% end %>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Inventory', new_dealership_inventory_path(@dealership.id) %>

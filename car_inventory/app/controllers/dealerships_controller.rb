@@ -7,9 +7,9 @@ class DealershipsController < ApplicationController
     @dealerships = current_user.dealerships
   end
 
-  # GET /dealerships/1 or /dealerships/1.json
+  # GET /dealerships/1 or  /dealerships/1.json
   def show
-    # @inventory = @dealerships.inventories.build
+    @inventory = @dealership.inventories.build
   end
 
   # GET /dealerships/new
@@ -22,7 +22,7 @@ class DealershipsController < ApplicationController
   end
 
   # POST /dealerships or /dealerships.json
-  def create
+  def create 
     @dealership = current_user.dealerships.build(dealership_params)
 
     respond_to do |format|

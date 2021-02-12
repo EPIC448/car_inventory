@@ -26,7 +26,7 @@ class InventoriesController < ApplicationController
     @inventory = @dealership.inventories.build(inventory_params)
 
     if @inventory.save
-      redirect_to([@inventory.dealership, @inventory], notice: 'Inventory was successfully created.')
+      redirect_to(@inventory.dealership, notice: 'Inventory was successfully created.')
     else
       render action: 'new'
     end
