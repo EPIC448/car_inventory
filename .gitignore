@@ -33,9 +33,29 @@
  https://semaphoreci.com/community/tutorials/how-to-test-rails-models-with-rspec
   Note: Rails comes with it our natural test enviorments
 
----- phase 3 Set up the inventory for cars. 
+---- phase 3 
+
   Demo app | my app
 
   √ users  - user
   √ project(name, description:text, references to users) - dealership(name,address, references to user)  
    √ task(name,description:text status project:references)   - inventory =>  inventory of cars(carmodel,price:integer, status [old or new], dealership:references)
+
+√Set up the inventory for cars.  models,controller, views
+ √Set up dealership models,controller, views
+ √ Set up dealership models,controller, views
+
+Test that we are able to sign up. 
+
+Demo sign-up account
+ Emails : bob@example.com
+ password: bob123!freshly
+
+
+ ------
+   For admin, Include the instruction on how to do it in the terminal
+
+    drop into  irb
+     and Change user boolean to admin. 
+
+ 
