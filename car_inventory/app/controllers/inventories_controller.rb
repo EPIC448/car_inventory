@@ -51,11 +51,11 @@ class InventoriesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_dealership
-      @dealership = Dealership.find(params[:dealership_id])
+      @dealership = current_user.dealerships.find(params[:dealership_id])
     end
 
     def set_inventory
-      @inventory = current_user.dealerships.find(params[:id])
+      @inventory = @dealership.inventories.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
