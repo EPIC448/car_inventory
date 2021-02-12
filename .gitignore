@@ -1,13 +1,9 @@
  Note on the project / todo. 
 
   Whole app Car inventory
-  Demo app | my app
 
-   project - inventory
-   task   - car
-   users  - user
 
-    phase1
+  --- √ phase1
      set up user with Devise functionality
        This include runing all the needed command
 
@@ -30,4 +26,16 @@
    use code to grant Admin access to current user
    current_user.update_attribute :admin, true
 
+---- Phase 2
+     
+      TDD testing  for inventory cars
+      If we are using rspec on project we build  already.
+ https://semaphoreci.com/community/tutorials/how-to-test-rails-models-with-rspec
+  Note: Rails comes with it our natural test enviorments
 
+---- phase 3 Set up the inventory for cars. 
+  Demo app | my app
+
+  √ users  - user
+  √ project(name, description, refernces to users) - dealership(name,address, references to user)  
+   √ task   - inventory =>  inventory of cars
