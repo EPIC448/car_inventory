@@ -55,7 +55,7 @@ class InventoriesController < ApplicationController
     end
 
     def set_inventory
-      @inventory = @dealership.inventories.find(params[:id])
+      @inventory = current_user.dealerships.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.

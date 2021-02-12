@@ -9,7 +9,7 @@ class DealershipsController < ApplicationController
 
   # GET /dealerships/1 or /dealerships/1.json
   def show
-  #  @inventory = @dealerships.inventorys.build
+    # @inventory = @dealerships.inventories.build
   end
 
   # GET /dealerships/new
