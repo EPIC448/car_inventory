@@ -1,0 +1,33 @@
+<%= form_with(model: [@inventory.dealership, @inventory]) do |f| %>
+  <% if @inventory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@inventory.errors.count, "error") %> prohibited this inventory from being saved:</h2>
+
+      <ul>
+      <% @inventory.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :carmodel %><br />
+    <%= f.text_field :carmodel %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.number_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :dealership %><br />
+    <%= f.text_field :dealership %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

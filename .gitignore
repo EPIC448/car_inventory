@@ -37,5 +37,5 @@
   Demo app | my app
 
   √ users  - user
-  √ project(name, description, refernces to users) - dealership(name,address, references to user)  
-   √ task   - inventory =>  inventory of cars
+  √ project(name, description:text, references to users) - dealership(name,address, references to user)  
+   √ task(name,description:text status project:references)   - inventory =>  inventory of cars(carmodel,price:integer, status [old or new], dealership:references)
