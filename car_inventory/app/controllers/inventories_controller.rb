@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class InventoriesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_dealership
-  before_action :set_inventory, only: [:show, :edit, :update, :destroy]
+  before_action :set_inventory, only: %i[show edit update destroy]
 
   # GET dealerships/1/inventories
   def index
@@ -9,8 +11,7 @@ class InventoriesController < ApplicationController
   end
 
   # GET dealerships/1/inventories/1
-  def show
-  end
+  def show; end
 
   # GET dealerships/1/inventories/new
   def new
@@ -18,8 +19,7 @@ class InventoriesController < ApplicationController
   end
 
   # GET dealerships/1/inventories/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST dealerships/1/inventories
   def create
@@ -34,9 +34,8 @@ class InventoriesController < ApplicationController
 
   # PUT dealerships/1/inventories/1
   def update
-    
     if @inventory.update_attributes(inventory_params)
-      redirect_to(@inventory.dealership notice: 'Inventory was successfully updated.')
+      redirect_to(@inventory.dealership(notice: 'Inventory was successfully updated.'))
     else
       render action: 'edit'
     end
@@ -50,17 +49,18 @@ class InventoriesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_dealership
-      @dealership = current_user.dealerships.find(params[:dealership_id])
-    end
 
-    def set_inventory
-      @inventory = @dealership.inventories.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_dealership
+    @dealership = current_user.dealerships.find(params[:dealership_id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def inventory_params
-      params.require(:inventory).permit(:carmodel, :price, :status, :dealership_id)
-    end
+  def set_inventory
+    @inventory = @dealership.inventories.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def inventory_params
+    params.require(:inventory).permit(:carmodel, :price, :status, :dealership_id)
+  end
 end
