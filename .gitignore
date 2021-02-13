@@ -47,10 +47,12 @@
 
 √Test that we are able to sign up. 
 
-Demo sign-up account
+Demo sign-up account - admin
  Emails : bob@example.com
  password: bob123!freshly
-
+ 
+  Emails : john@example.com
+ password: asfasf!123
 
  ------√ Give admin the power to add, edit and destory inventory
    For admin, Include the instruction on how to do it in the terminal
@@ -81,7 +83,7 @@ Demo sign-up account
   run "@user = @user.admin = true "
    run "@user.admin = true"
     run "@user.save"
-    or 
+    
   current_user.update_attribute :admin, true
 
   user and admin video. min 6:40
