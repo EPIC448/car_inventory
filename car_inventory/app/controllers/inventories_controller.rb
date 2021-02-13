@@ -34,8 +34,9 @@ class InventoriesController < ApplicationController
 
   # PUT dealerships/1/inventories/1
   def update
+    
     if @inventory.update_attributes(inventory_params)
-      redirect_to([@inventory.dealership, @inventory], notice: 'Inventory was successfully updated.')
+      redirect_to(@inventory.dealership notice: 'Inventory was successfully updated.')
     else
       render action: 'edit'
     end
@@ -45,7 +46,7 @@ class InventoriesController < ApplicationController
   def destroy
     @inventory.destroy
 
-    redirect_to dealership_inventories_url(@dealership)
+    redirect_to @dealership
   end
 
   private
