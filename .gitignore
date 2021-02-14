@@ -26,14 +26,8 @@
    use code to grant Admin access to current user
    current_user.update_attribute :admin, true
 
----- Phase 2
-     
-      TDD testing  for inventory cars
-      If we are using rspec on project we build  already.
- https://semaphoreci.com/community/tutorials/how-to-test-rails-models-with-rspec
-  Note: Rails comes with it our natural test enviorments
 
----- phase 3 
+---- phase 2
 
   Demo app | my app
 
@@ -54,7 +48,7 @@ Demo sign-up account - admin
   Emails : john@example.com
  password: asfasf!123
 
- ------√ Give admin the power to add, edit and destory inventory
+ ------√ phase 3 Give admin the power to add, edit and destory inventory
    For admin, Include the instruction on how to do it in the terminal
     drop into  irb
      and Change user boolean to admin. 
@@ -93,7 +87,7 @@ Demo sign-up account - admin
 
 
 
-------------------------------------------------------------
+------------------------------------------------------------phase 4 
      Stop video at 19:53.   have a little issue.
       Edit button is giving me issues.  
 
@@ -121,7 +115,7 @@ Demo sign-up account - admin
     run "@user.save"
     or 
   current_user.update_attribute :admin, true
---------------------------------------------  Install and Rails Rubocup
+--------------------------------------------Phasee 5  Install and Rails Rubocup
     ultimate sources rubocop  https://docs.rubocop.org/rubocop/1.0/cops_style.html#styledocumentation
     https://github.com/rubocop-hq/rubocop-rails
     https://github.com/rubocop-hq/rubocop
@@ -133,7 +127,17 @@ Demo sign-up account - admin
      It help rubocop omit files saved in .rubocop.yml
 
 
-    ----------------------------------------------- Install rspec
+    -----------------------------------Phase 6 Install rspec
+     
+      TDD testing  for inventory cars
+      If we are using rspec on project we build  already.
+ https://semaphoreci.com/community/tutorials/how-to-test-rails-models-with-rspec
+  Note: Rails comes with it our natural test enviorments
+
+
      put rspec in the gemfile
       run "bundle Install" 
      run "rails generate rspec:install"
+      
+      To run rspec 
+       run bundle exec rspec
