@@ -145,8 +145,13 @@ Demo sign-up account - admin
       Generate test files with rspec. 
       https://relishapp.com/rspec/rspec-rails/docs/generators
 
+      rspec contoroller
+      https://relishapp.com/rspec/rspec-rails/v/4-0/docs/controller-specshttps://relishapp.com/rspec/rspec-rails/v/4-0/docs/controller-specs
+
 -------------------------------------
  Move the sign-out button. so be where we can use it all the time.
  Look back onto Your rails video
 
 -------------- Price change -%20 at end of every month -
+Get the end of the month
+https://stackoverflow.com/questions/14120661/get-last-day-of-the-month-in-ruby

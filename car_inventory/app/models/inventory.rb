@@ -9,5 +9,5 @@ class Inventory < ApplicationRecord
     ['Car Status', 'car-status'],
     %w[New new],
     %w[Old old]
-  ].freeze
+  ]
 end
