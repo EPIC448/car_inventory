@@ -121,13 +121,19 @@ Demo sign-up account - admin
     run "@user.save"
     or 
   current_user.update_attribute :admin, true
---------------------------------------------
-    Install and Rails Rubocup
+--------------------------------------------  Install and Rails Rubocup
     ultimate sources rubocop  https://docs.rubocop.org/rubocop/1.0/cops_style.html#styledocumentation
     https://github.com/rubocop-hq/rubocop-rails
     https://github.com/rubocop-hq/rubocop
+ exclude certain files
+ https://docs.rubocop.org/rubocop/configuration.html#includingexcluding-files   
 
     /// need a little configuration. 
      When we run "rubocop add --force-exclusion"
-
      It help rubocop omit files saved in .rubocop.yml
+
+
+    ----------------------------------------------- Install rspec
+     put rspec in the gemfile
+      run "bundle Install" 
+     run "rails generate rspec:install"
