@@ -19,10 +19,12 @@
 <%= link_to 'Back', dealerships_path %>
 
 <hr>
+ <%if current_user && current_user.admin? %>
+
  <h1>New inventory</h1>
 
 <%= render 'inventories/form' %>
-
+<%end%>
 <hr>
 
 <h1>Listing inventories</h1>

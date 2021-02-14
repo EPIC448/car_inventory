@@ -14,7 +14,7 @@
 <% @inventories.each do |inventory| %>
   <tr>
     <td><%= inventory.carmodel %></td>
-    <td><%= inventory.price %></td>
+    <td><%= inventory.end_of_month_price %></td>
     <td><%= inventory.status %></td>
     <td><%= inventory.dealership %></td>
     <td><%= link_to 'Show', [inventory.dealership, inventory] %></td>

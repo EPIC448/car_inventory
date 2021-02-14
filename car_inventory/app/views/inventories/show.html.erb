@@ -19,7 +19,7 @@
   <b>Dealership:</b>
   <%= @inventory.dealership %>
 </p>
-
-
-<%= link_to 'Edit', edit_dealership_inventory_path(@inventory.dealership, @inventory) %> |
+ <%if current_user && current_user.admin? %>
+  <%= link_to 'Edit', edit_dealership_inventory_path(@inventory.dealership, @inventory) %> |
+<%end%>
 <%= link_to 'Back', dealership_inventories_path(@inventory.dealership) %>
