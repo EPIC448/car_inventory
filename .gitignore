@@ -122,3 +122,12 @@ Demo sign-up account - admin
     or 
   current_user.update_attribute :admin, true
 --------------------------------------------
+    Install and Rails Rubocup
+    ultimate sources rubocop  https://docs.rubocop.org/rubocop/1.0/cops_style.html#styledocumentation
+    https://github.com/rubocop-hq/rubocop-rails
+    https://github.com/rubocop-hq/rubocop
+
+    /// need a little configuration. 
+     When we run "rubocop add --force-exclusion"
+
+     It help rubocop omit files saved in .rubocop.yml
