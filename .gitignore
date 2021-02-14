@@ -87,7 +87,7 @@ Demo sign-up account - admin
 
 
 
-------------------------------------------------------------phase 4 
+-----------------------------------------------------phase 4 
      Stop video at 19:53.   have a little issue.
       Edit button is giving me issues.  
 
@@ -113,7 +113,7 @@ Demo sign-up account - admin
   run "@user = @user.admin = true "
    run "@user.admin = true"
     run "@user.save"
-    or 
+  ------  or 
   current_user.update_attribute :admin, true
 --------------------------------------------Phasee 5  Install and Rails Rubocup
     ultimate sources rubocop  https://docs.rubocop.org/rubocop/1.0/cops_style.html#styledocumentation
@@ -123,16 +123,18 @@ Demo sign-up account - admin
  https://docs.rubocop.org/rubocop/configuration.html#includingexcluding-files   
 
     /// need a little configuration. 
-     When we run "rubocop add --force-exclusion"
+    Readme:  When we run "rubocop add --force-exclusion"
      It help rubocop omit files saved in .rubocop.yml
+Readme:  Todo: Add all the comments as needed. 
+  Then, explain how to run rubocop in exclude certain files. 
 
-
-    -----------------------------------Phase 6 Install rspec
+    -----------------------------------Phase 6 Install rspec--
      
       TDD testing  for inventory cars
       If we are using rspec on project we build  already.
  https://semaphoreci.com/community/tutorials/how-to-test-rails-models-with-rspec
-  Note: Rails comes with it our natural test enviorments
+
+  ReadMe: Rails comes with it our natural test enviorments
 
 
      put rspec in the gemfile
@@ -148,10 +150,35 @@ Demo sign-up account - admin
       rspec contoroller
       https://relishapp.com/rspec/rspec-rails/v/4-0/docs/controller-specshttps://relishapp.com/rspec/rspec-rails/v/4-0/docs/controller-specs
 
--------------------------------------
- Move the sign-out button. so be where we can use it all the time.
- Look back onto Your rails video
+
 
 -------------- Price change -%20 at end of every month -
 Get the end of the month
 https://stackoverflow.com/questions/14120661/get-last-day-of-the-month-in-ruby
+Created in the dealership model.
+ Now we need to use it in out Show page with the prices.
+  In video Project. See how 
+
+  percent_complete was used in the Project model and inside the project 
+    minutes: 49:10, or 1:03:05
+
+  For my project. end_of_month in dealership model
+ Get the last of the month === https://www.rubyguides.com/2015/12/ruby-time/
+
+ Note: Feb end in 29 days
+        june  30 days
+        rest of month has 31 days 
+
+    method 
+     if date in a month is 29th or 30 or 31?
+
+      reduce price by %20
+
+      https://www.geeksforgeeks.org/ruby-date-and-time/
+
+       Readme: 
+
+  
+-------------------------------------Sign-out button... Look at devise files 
+ Move the sign-out button. so be where we can use it all the time.
+ Look back onto Your rails video
