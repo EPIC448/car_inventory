@@ -141,3 +141,6 @@ Demo sign-up account - admin
       
       To run rspec 
        run bundle exec rspec
+
+      Generate test files with rspec. 
+      https://relishapp.com/rspec/rspec-rails/docs/generators
