@@ -1,0 +1,72 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dealership.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @dealership.address %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @dealership.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_dealership_path(@dealership) %> |
+<%= link_to 'Back', dealerships_path %>
+
+<hr>
+ <%if current_user && current_user.admin? %>
+
+ <h1>New inventory</h1>
+
+<%= render 'inventories/form' %>
+<%end%>
+<hr>
+
+<h1>Listing inventories</h1>
+
+<table>
+  <tr>
+    <th>Carmodel</th>
+    <th>Price</th>
+    <th>Status</th>
+    <th>Dealership</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dealership.inventories.each do |inventory| %>
+<% if inventory.persisted? %>
+  <tr>
+    <td><%= inventory.carmodel %></td>
+
+    <%time = Time.new%>
+    <%time = Time.new%>
+    <%if time.day == 31 || time.day == 30 || time.day == 29%>
+     <td><%= inventory.price = inventory.price - inventory.price * 0.02 %></td>
+        <%else%>
+    <td><%= inventory.price%></td>
+    <%end%>
+    <td><%= inventory.status %></td>
+    <td><%= inventory.dealership %></td>
+    <td><%= link_to 'Show', [inventory.dealership, inventory] %></td>
+  <%if current_user && current_user.admin? %>
+    <td><%= link_to 'Edit', edit_dealership_inventory_path(inventory.dealership, inventory) %></td>
+    <td><%= link_to 'Destroy', [inventory.dealership, inventory], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+   <%end%>
+  <% end %>
+<% end %>
+</table>
+
+<br />
+
+ <%if current_user && current_user.admin? %>
+
+<%= link_to 'New Inventory', new_dealership_inventory_path(@dealership.id) %>
+<%end%>

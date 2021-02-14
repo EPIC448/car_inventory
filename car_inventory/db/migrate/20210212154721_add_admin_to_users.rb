@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# give user a property of ADMIN
 class AddAdminToUsers < ActiveRecord::Migration[6.1]
   def change
     add_column :users, :admin, :boolean, default: false

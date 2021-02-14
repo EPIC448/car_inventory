@@ -1,0 +1,25 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  TargetRubyVersion: "3.0"
+  Exclude:
+    - "spec/**/*"
+    - "vendor/**/*"
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bin/{rails,rake}'
+    - !ruby/regexp /old_and_unused\.rb$/
+Documentation:
+  Enabled: false
+
+HashSyntax:
+  Enabled: false
+
+MethodName:
+  Enabled: false
+
+StringLiterals:
+  Enabled: false
