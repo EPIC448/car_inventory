@@ -1,18 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Dealership, type: :model do
-  
-#  before(:each) do
-#   @dealership = Dealership.create(name: "Dealership name", address: "123 street address", user: user.id)
-#  end
-
-#   describe "creation of dealership" do
-#     it "should have one dealership created after required inforamtion is enter"
-#     expect(Dealership.all.count).to eq(1)
-       
-#   end
-
-
 
   it "is valid with out NAME which is a string" do
     dealership = Dealership.new(name: nil)
@@ -24,7 +12,9 @@ RSpec.describe Dealership, type: :model do
     expect(dealership).to_not be_valid
   end
   
-
+  describe "Associations" do
+    it { should belong_to(:user).without_validating_presence }
+  end
 end
 
 
