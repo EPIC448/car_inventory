@@ -14,7 +14,12 @@
 <% @inventories.each do |inventory| %>
   <tr>
     <td><%= inventory.carmodel %></td>
-    <td><%= inventory.end_of_month_price %></td>
+    <%time = Time.new%>
+    <%if time.day == 31 || time.day == 30 || time.day == 29%>
+     <td><%= inventory.price = inventory.price - inventory.price * 0.02 %></td>
+        <%else%>
+    <td><%= inventory.price%></td>
+    <%end%>
     <td><%= inventory.status %></td>
     <td><%= inventory.dealership %></td>
     <td><%= link_to 'Show', [inventory.dealership, inventory] %></td>

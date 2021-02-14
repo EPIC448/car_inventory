@@ -44,7 +44,14 @@
 <% if inventory.persisted? %>
   <tr>
     <td><%= inventory.carmodel %></td>
-    <td><%= inventory.price %></td>
+
+    <%time = Time.new%>
+    <%time = Time.new%>
+    <%if time.day == 31 || time.day == 30 || time.day == 29%>
+     <td><%= inventory.price = inventory.price - inventory.price * 0.02 %></td>
+        <%else%>
+    <td><%= inventory.price%></td>
+    <%end%>
     <td><%= inventory.status %></td>
     <td><%= inventory.dealership %></td>
     <td><%= link_to 'Show', [inventory.dealership, inventory] %></td>
@@ -52,7 +59,7 @@
     <td><%= link_to 'Edit', edit_dealership_inventory_path(inventory.dealership, inventory) %></td>
     <td><%= link_to 'Destroy', [inventory.dealership, inventory], method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
-  <%end%>
+   <%end%>
   <% end %>
 <% end %>
 </table>
