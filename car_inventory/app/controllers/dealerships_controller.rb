@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Dealership is where inventory of cars  would be available to users
 class DealershipsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_dealership, only: %i[show edit update destroy]

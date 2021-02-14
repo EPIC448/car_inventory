@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Generated active record for inventories for all the cars
 class CreateInventories < ActiveRecord::Migration[6.1]
   def change
     create_table :inventories do |t|

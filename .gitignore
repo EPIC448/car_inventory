@@ -125,8 +125,9 @@ Demo sign-up account - admin
     /// need a little configuration. 
     Readme:  When we run "rubocop add --force-exclusion"
      It help rubocop omit files saved in .rubocop.yml
-Readme:  Todo: Add all the comments as needed. 
-  Then, explain how to run rubocop in exclude certain files. 
+  Readme:  Todo: Add all the comments as needed. 
+  Then, explain how to run rubocop in exclude certain files.
+  MAke sure to CD into the correct file 
 
     -----------------------------------Phase 6 Install rspec--
      

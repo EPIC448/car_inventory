@@ -52,8 +52,6 @@ group :development do
   # rspec
   gem 'rspec-rails'
   gem 'shoulda-matchers'
-
-
 end
 
 group :test do

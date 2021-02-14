@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Inventory of all the cars that has being created
 class InventoriesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_dealership
