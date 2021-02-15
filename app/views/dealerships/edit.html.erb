@@ -1,0 +1,10 @@
+<h1>Editing Dealership</h1>
+
+<%= render 'form', dealership: @dealership %>
+
+<%= link_to 'Show', @dealership %> |
+<%= link_to 'Back', dealerships_path %>
+
+<hr>
+<hr>
+<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>

@@ -1,0 +1,15 @@
+current directory: /Users/omoogun/Desktop/Flatiron_Dev_files/ruby/car_inventory/car_inventory/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/omoogun/.rvm/rubies/ruby-3.0.0/bin/ruby -I /Users/omoogun/.rvm/rubies/ruby-3.0.0/lib/ruby/site_ruby/3.0.0 -r ./siteconf20210213-25195-ainpyi.rb extconf.rb
+creating Makefile
+
+current directory: /Users/omoogun/Desktop/Flatiron_Dev_files/ruby/car_inventory/car_inventory/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= clean
+
+current directory: /Users/omoogun/Desktop/Flatiron_Dev_files/ruby/car_inventory/car_inventory/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\=
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/omoogun/Desktop/Flatiron_Dev_files/ruby/car_inventory/car_inventory/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 cruby.bundle ./.gem.20210213-25195-n5qb5n/skiptrace/internal
