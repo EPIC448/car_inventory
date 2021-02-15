@@ -40,6 +40,8 @@ gem 'nested_scaffold'
 gem 'rubocop-rails', require: false
 gem 'rspec-rails'
 gem 'shoulda-matchers'
+gem 'pg'
+gem 'rails_12factor'
  
 ```
  * Configuration
@@ -88,6 +90,37 @@ To omit excluded file when using rubocup,
 
 * Deployment instructions
 
+ Assuming that you have an heroku account already else, go down to the heroku link to create one and follow the instruction on the heroku site.
+```
+Configure your Gemfile with
+
+group :production do
+# using the gem on heroku
+ gem 'pg'
+ gem 'rails_12factor'
+end
+
+run 'bundle install''
+
+run 'heroku login'
+heroku: Press any key to open up the browser to login or q to exit
+ ›   Warning: If browser does not open, visit
+ ›   https://cli-auth.heroku.com/auth/browser/***
+heroku: Waiting for login...
+Logging in... done
+Logged in as me@example.co
+
+
+Then run 'git clone git@github.com:EPIC448/car_inventory.git'
+
+run 'heroku create'
+
+run 'git push heroku main'
+
+```
+
+
+-  [Heroku deployment](#https://tranquil-depths-24424.herokuapp.com/users/sign_in)
 
 [Back To The Top](#Dealership-Inventory-Managment-System)
 
@@ -98,6 +131,7 @@ To omit excluded file when using rubocup,
 - [Rubocop](https://rubocop.org/#:~:text=RuboCop%20is%20a%20Ruby%20code,community%2Ddriven%20Ruby%20Style%20Guide.)
 - [Rspec](https://relishapp.com/rspec/rspec-rails/v/4-0/docs/)
 - [Ruby](https://ruby-doc.org/)
+- [Heroku](https://devcenter.heroku.com/articles/getting-started-with-ruby#deploy-the-app)
 
 
 ---
