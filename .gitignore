@@ -181,5 +181,8 @@ Created in the dealership model.
 
   
 -------------------------------------Sign-out button... Look at devise files 
- Move the sign-out button. so be where we can use it all the time.
+√Move the sign-out button. so be where we can use it all the time.
  Look back onto Your rails video
+
+-------------- Deploy to Heroku------- 
+https://devcenter.heroku.com/articles/getting-started-with-ruby#deploy-the-app
