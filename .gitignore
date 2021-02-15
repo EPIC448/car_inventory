@@ -183,3 +183,4 @@ Created in the dealership model.
 -------------------------------------Sign-out button... Look at devise files 
  Move the sign-out button. so be where we can use it all the time.
  Look back onto Your rails video
+ Resources : https://stackoverflow.com/questions/26595874/i-want-make-push-and-get-error-src-refspec-master-does-not-match-any
