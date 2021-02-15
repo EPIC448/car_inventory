@@ -16,7 +16,7 @@ RSpec.describe Inventory, type: :model do
     expect(inventory).to_not be_valid
   end
 
-
+#  Write the Rspec for it first
 #   Price reduce by 2% every month. start at 100
 # month1 price = 100 -2% = 98
 # month2 price     = 98 - 2% = 96.04
