@@ -131,7 +131,7 @@ Demo sign-up account - admin
 
 
 
---- √ Phase 7 Price change -%20 at end of every month -
+---  Phase 7 Price change -%20 at end of every month -
 Get the end of the month
 https://stackoverflow.com/questions/14120661/get-last-day-of-the-month-in-ruby
 Created in the dealership model.
@@ -143,12 +143,20 @@ Created in the dealership model.
 For my project. end_of_month in dealership model
  Get the last of the month === https://www.rubyguides.com/2015/12/ruby-time/
 
- Note: Feb end in 29 days
-        june  30 days
-        rest of month has 31 days 
-    method 
-     if date in a month is 29th or 30 or 31?
-      reduce price by %20
+ Note: 
+#   Price reduce by 2% every month. start at 100
+# month1 price = 100 -2% = 98
+# month2 price     = 98 - 2% = 96.04
+# month3 price     = 96.04 - 2% = 94.472
+#  (inventory price = inventory price - 2%) ^ time  (2ˆ4) =16 
+(1x2) =2
+(2x2) =4
+(4x2)=8
+(8x2)= 16
+
+Then, Remove the logic from the Views. and models. will still be
+ inventory.price
+
       https://www.geeksforgeeks.org/ruby-date-and-time/
 
   Readme: 
@@ -173,3 +181,12 @@ run 'heroku run rake db:migrate'    to create migration in Heroku
 To push changes into Heroku you 
 run 'git push -am "README updated to include Deployment for Heroku"
 run "git push heroku master " 
+
+---- all user can see inventory of cars. 
+
+
+-----  Issues with Server
+When you get A server is already running.
+ Check /Users/omoogun/Desktop/Flatiron_Dev_files/ruby/car_inventory/car_inventory/tmp/pids/server.pid.
+
+kill -9 /Users/omoogun/Desktop/Flatiron_Dev_files/ruby/car_inventory/car_inventory/tmp/pids/server.pid

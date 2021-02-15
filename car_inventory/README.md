@@ -105,7 +105,7 @@ To omit excluded file when using rubocup,
 ---
 
 ---
-### Services (Heruko)
+### Services (Heroku)
 
 * Deployment instructions
 

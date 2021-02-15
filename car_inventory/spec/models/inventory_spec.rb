@@ -15,4 +15,13 @@ RSpec.describe Inventory, type: :model do
     inventory = Inventory.new(status: nil)
     expect(inventory).to_not be_valid
   end
+
+
+#   Price reduce by 2% every month. start at 100
+# month1 price = 100 -2% = 98
+# month2 price     = 98 - 2% = 96.04
+# month3 price     = 96.04 - 2% = 94.472
+#  (inventory price - inventory price) ^ time
+
+
 end
