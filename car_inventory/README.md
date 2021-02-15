@@ -83,6 +83,25 @@ To omit excluded file when using rubocup,
 
  run command "rubocop add --force-exclusion"
 ```
+
+ To grant a regular user ADMIN features because only ADMIN can create and delete inventories
+
+ ```
+  make sure to log in as a regular user, then in your project terminal 
+
+  run command "rails c" to jump into the rails console
+  run command "User.first"  to ensure you have the correct user
+
+   it should return something like: 
+
+   "#<User id: 1, email: "bob@example.com", 
+  created_at: "2021-02-12 18:39:27.791451000 +0000", updated_at: "2021-02-12 18:39:27.791451000 +0000", admin: false> " 
+  
+  Now we change the admin from false to true
+   runcommand "@user = @user.admin = true "
+   run command "@user.admin = true"
+   run command "@user.save"
+ ```
 ---
 
 ---
