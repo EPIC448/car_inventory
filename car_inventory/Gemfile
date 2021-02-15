@@ -49,7 +49,7 @@ group :development do
   gem 'spring'
 
   # Use sqlite3 as the database for Active Record
-    gem 'sqlite3', '~> 1.4'
+  gem 'sqlite3', '~> 1.4'
 
   # rspec
   gem 'rspec-rails'
@@ -65,11 +65,10 @@ group :test do
 end
 
 group :production do
-# using the gem on heroku
- gem 'pg'
- gem 'rails_12factor'
+  # using the gem on heroku
+  gem 'pg'
+  gem 'rails_12factor'
 end
-
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
