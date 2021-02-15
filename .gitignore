@@ -65,7 +65,7 @@ Demo sign-up account - admin
     Sign-up or log_ing into a user account.
  
   In the car_inventory terminal
-  
+
  ------- use code to grant Admin access to current user
 
     run "rails c"
@@ -187,3 +187,16 @@ Created in the dealership model.
 
 -------------- Deploy to Heroku------- 
 https://devcenter.heroku.com/articles/getting-started-with-ruby#deploy-the-app
+After following steps in the Heroku link above
+run git remote  Heroku
+run git push --set-upstream heroku master 
+run git push heroku
+
+
+if you face issues.
+run 'heroku logs'   to see where the issue are
+run 'heroku run rake db:migrate'    to create migration in Heroku
+
+To push changes into Heroku you 
+run 'git push -am "README updated to include Deployment for Heroku"
+run "git push heroku master " 
