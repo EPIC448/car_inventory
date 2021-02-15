@@ -67,6 +67,8 @@
 <br />
 
  <%if current_user && current_user.admin? %>
-
 <%= link_to 'New Inventory', new_dealership_inventory_path(@dealership.id) %>
 <%end%>
+<hr>
+<hr>
+<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>

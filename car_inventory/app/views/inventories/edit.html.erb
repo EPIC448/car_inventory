@@ -4,3 +4,7 @@
 
 <%= link_to 'Show', [@inventory.dealership, @inventory] %> |
 <%= link_to 'Back', dealership_inventories_path(@inventory.dealership) %>
+
+<hr>
+<hr>
+<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
