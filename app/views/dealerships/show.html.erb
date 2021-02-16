@@ -1,74 +1,87 @@
-<p id="notice"><%= notice %></p>
+
+<%= link_to 'Back', dealerships_path, class: 'btn btn-secondary mb-3' %>
+
+<div class ="card">
+<div class = "card-body">
+       <h2 class='card-title d-flex justify-content-between mb-4'>
+        <span> <%= @dealership.name%></span>
+        
+        <div> 
+            <%= link_to 'Edit', edit_dealership_path(@dealership),class:'btn btn-light' %> 
+              <%= link_to 'Destroy',@dealership, method: :delete, class: 'btn btn-secondary', data: { confirm: 'Are you sure?' } %>
+
+        </div>
+    </h2>
+
+  <%# <%if current_user && current_user.admin? %> 
+    <h6>Add inventory</h6>
+   
+   <%= form_with(model: [@inventory.dealership, @inventory]) do |f| %>
+  <% if @inventory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@inventory.errors.count, "error") %> prohibited this inventory from being saved:</h2>
+
+      <ul>
+      <% @inventory.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.hidden_field :status, value: 'car-status'%>
+  <div class="input-group">
+    <%= f.text_field :carmodel, class: 'form-control', placeholder: 'Enter Car Model' %>
+    <div class ="input-group-append">
+    <%= f.submit class: 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %> 
+<%#  End of Form %>
+ <%# <%end%> 
+ <hr>
+
+
+ <div class="mb-4">
+  <h6> Inventory</h6>
+ <% @dealership.inventories.each do |inventory| %>
+    <%if inventory.persisted?%>
+        <div class="card mb-4"> 
+          <div class="card-body"> 
+            <div class = "d-flex justify-content-between">
+          <span class="badge badge-<%= inventory.status %> mb-3"><%= inventory.status %></span>
+
+          <div>
+            <%# <%if current_user && current_user.admin? %> 
+                    <td><%= link_to 'Edit', edit_dealership_inventory_path(inventory.dealership, inventory),class: 'btn btn-light' %></td>
+                    <td><%= link_to 'Destroy', [inventory.dealership, inventory], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-secondary' %></td>
+                <%# <% end %> 
+
+             </div>
+            </div>
+
+              <h5 class='card-title  mb-2'>
+               <span><%= inventory.carmodel%></span>
+              </h5>
+              <p> $<%= inventory.price%></p>
+
+          </div>
+        </div>
+       <%end%>
+      <%end%>
+  </div>
+ </div>
+</div>
+
+
 
 <p>
-  <strong>Name:</strong>
+  <strong>Dealership Name:</strong>
   <%= @dealership.name %>
 </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @dealership.address %>
-</p>
 
-<p>
-  <strong>User:</strong>
-  <%= @dealership.user_id %>
-</p>
 
-<%= link_to 'Edit', edit_dealership_path(@dealership) %> |
-<%= link_to 'Back', dealerships_path %>
 
-<hr>
- <%if current_user && current_user.admin? %>
-
- <h1>New inventory</h1>
-
-<%= render 'inventories/form' %>
-<%end%>
-<hr>
-
-<h1>Listing inventories</h1>
-
-<table>
-  <tr>
-    <th>Carmodel</th>
-    <th>Price</th>
-    <th>Status</th>
-    <th>Dealership</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @dealership.inventories.each do |inventory| %>
-<% if inventory.persisted? %>
-  <tr>
-    <td><%= inventory.carmodel %></td>
-
-    <%time = Time.new%>
-    <%time = Time.new%>
-    <%if time.day == 31 || time.day == 30 || time.day == 29%>
-     <td><%= inventory.price = inventory.price - inventory.price * 0.02 %></td>
-        <%else%>
-    <td><%= inventory.price%></td>
-    <%end%>
-    <td><%= inventory.status %></td>
-    <td><%= inventory.dealership %></td>
-    <td><%= link_to 'Show', [inventory.dealership, inventory] %></td>
-  <%if current_user && current_user.admin? %>
-    <td><%= link_to 'Edit', edit_dealership_inventory_path(inventory.dealership, inventory) %></td>
-    <td><%= link_to 'Destroy', [inventory.dealership, inventory], method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-   <%end%>
-  <% end %>
-<% end %>
-</table>
-
-<br />
-
- <%if current_user && current_user.admin? %>
-<%= link_to 'New Inventory', new_dealership_inventory_path(@dealership.id) %>
-<%end%>
 <hr>
 <hr>
 <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
