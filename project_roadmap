@@ -158,9 +158,11 @@ For my project. end_of_month in dealership model
   Pesudo code for Rspec
   # take in number of months
 def price(price,n)
-    
+   time = Time.new
+    puts time.month
     #iterate over number of months & perform calulation 
-    for i in 1..n
+    #for i in 1..n  work like a while loop
+    for i in 1..time.month
     price = price - (price * 0.02)
     puts "Month #{i} price $#{price.round(2)}"
 end
@@ -173,16 +175,8 @@ end
      //>  working 
      Month 1 price $98.0
 Month 2 price $96.04
-Month 3 price $94.12
-Month 4 price $92.24
-Month 5 price $90.39
-Month 6 price $88.58
-Month 7 price $86.81
-Month 8 price $85.08
-Month 9 price $83.37
-Month 10 price $81.71
-Month 11 price $80.07
-Month 12 price $78.47
+
+
 
   may need to add a inventory.price.save
 Then, Remove the logic from the Views. and models. will still be
@@ -192,6 +186,12 @@ Then, Remove the logic from the Views. and models. will still be
 
   Readme: 
    I just put in directly inside the views files for dealership and inventory
+
+Reconfigure the formula for month 2% reduction 
+
+
+
+
 
   
 ---- √ phase 8 Sign-out button... Look at devise files 
