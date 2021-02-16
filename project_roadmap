@@ -157,6 +157,7 @@ For my project. end_of_month in dealership model
  
   Pesudo code for Rspec
   # take in number of months
+  
 def price(price,n)
    time = Time.new
     puts time.month
@@ -221,3 +222,9 @@ When you get A server is already running.
  Check /Users/omoogun/Desktop/Flatiron_Dev_files/ruby/car_inventory/car_inventory/tmp/pids/server.pid.
 
 kill -9 /Users/omoogun/Desktop/Flatiron_Dev_files/ruby/car_inventory/car_inventory/tmp/pids/server.pid
+cat /Users/omoogun/Desktop/Flatiron_Dev_files/ruby/car_inventory/car_inventory/tmp/pids/server.pid
+18643%                                  
+
+kill -9 18643
+
+then restart youtr server
