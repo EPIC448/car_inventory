@@ -256,6 +256,12 @@ Video Stopeped at 45:37  Dealership Show page Bootstrap _complete
 
  Next fix the end pages. 
 
+ ----------- Allow only admin to edit the files
+  most in the Index and show and edit  files for dealership and  inventory
+  <%= f.hidden_field :status, value: 'car-status'%>
+
+ ----------------
+
 
 
 -----  EXTRA Issues with Server---------

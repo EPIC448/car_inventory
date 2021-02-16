@@ -11,20 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :carmodel %><br />
-    <%= f.text_field :carmodel %>
+    <%= f.text_field :carmodel,class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :price %><br />
-    <%= f.number_field :price %>
+    <%= f.number_field :price,class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :status %><br />
-    <%= f.select :status, Inventory::STATUS_OPTIONS %>
+    <%= f.select :status, Inventory::STATUS_OPTIONS,{}, class: 'form-control' %>
   </div>
   
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>

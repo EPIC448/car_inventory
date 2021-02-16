@@ -10,7 +10,7 @@
    <%# render each dealership in its own card 29:02  %>
    <%@dealerships.each do | dealership|%>
     <%= link_to dealership do %>
-    <div class="card">
+    <div class="card project-card">
       <div class="card-body">
         <h5 class='card-titel'><%= dealership.name%></h5>
         <p><%= dealership.address%></p>
