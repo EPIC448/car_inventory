@@ -261,7 +261,7 @@ Video Stopeped at 45:37  Dealership Show page Bootstrap _complete
   <%= f.hidden_field :status, value: 'car-status'%>
 
  ----------------
-
+ Edit the models at 10:06
 
 
 -----  EXTRA Issues with Server---------
