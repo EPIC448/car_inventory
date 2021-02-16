@@ -214,10 +214,16 @@ To push changes into Heroku you
 run 'git push -am "README updated to include Deployment for Heroku"
 run "git push heroku master " 
 
----- all user can see inventory of cars. 
+---- Phase 10 add Styling to the project -
+
+ Min 21:50
 
 
------  Issues with Server
+
+
+
+
+-----  EXTRA Issues with Server---------
 When you get A server is already running.
  Check /Users/omoogun/Desktop/Flatiron_Dev_files/ruby/car_inventory/car_inventory/tmp/pids/server.pid.
 
