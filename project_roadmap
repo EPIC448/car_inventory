@@ -211,6 +211,7 @@ run 'heroku logs'   to see where the issue are
 run 'heroku run rake db:migrate'    to create migration in Heroku
 
 To push changes into Heroku you 
+ git commit  -am "stylesheet was added for buttons for all views"
 run 'git push -am "README updated to include Deployment for Heroku"
 run "git push heroku master " 
 

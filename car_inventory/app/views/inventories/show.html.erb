@@ -7,12 +7,7 @@
 
 <p>
   <b>Price:</b>
-  <%time = Time.new%>
-    <%if time.day == 31 || time.day == 30 || time.day == 29%>
-    <%= @inventory.price = @inventory.price - @inventory.price * 0.02 %>
-    <%else%>
     <%= @inventory.price%>
-    <%end%>
 </p>
 
 <p>
