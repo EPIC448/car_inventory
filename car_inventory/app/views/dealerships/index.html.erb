@@ -1,34 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class = "card">
 
-<h1>Dealerships</h1>
+   <div class= "card-body">
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <h2 class='card-title d-flex justify-content-between mb-4'>
+    <span> Dealerships</span>
+    <%= link_to 'New Dealership', new_dealership_path, class:'btn btn-primary' %>
+    </h2>
+   
+   <%# render each dealership in its own card 29:02  %>
+   <%@dealerships.each do | dealership|%>
+    <%= link_to dealership do %>
+    <div class="card">
+      <div class="card-body">
+        <h5 class='card-titel'><%= dealership.name%></h5>
+        <p><%= dealership.address%></p>
 
-  <tbody>
-    <% @dealerships.each do |dealership| %>
-      <tr>
-        <td><%= dealership.name %></td>
-        <td><%= dealership.address %></td>
-        <td><%= dealership.user_id %></td>
-        <td><%= link_to 'Show', dealership %></td>
-        <td><%= link_to 'Edit', edit_dealership_path(dealership) %></td>
-        <td><%= link_to 'Destroy', dealership, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      </div>
+    </div>
+    <%end%> 
+   <%end%>
+
+   </div>
+
+</div>
 
 <br>
 
-<%= link_to 'New Dealership', new_dealership_path %>
 <hr>
 <%# <%= link_to 'Look at inventories', dealership_inventories_path(@dealerships) %>  
 <hr>

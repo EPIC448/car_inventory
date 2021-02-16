@@ -218,7 +218,39 @@ run "git push heroku master "
 
  Min 21:50
 
+ Extra code removed form  app/views/dealership/show.html.erb
 
+<hr>
+
+<h1>Listing inventories</h1>
+
+<table>
+  <tr>
+    <th>Carmodel</th>
+    <th>Price</th>
+    <th>Status</th>
+    <th>Dealership</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dealership.inventories.each do |inventory| %>
+<% if inventory.persisted? %>
+  <tr>
+    <td><%= inventory.carmodel %></td>
+    <%time = Time.new%>       
+    <td><%= inventory.price%></td>
+    <td><%= inventory.status %></td>
+    <td><%= inventory.dealership %></td>
+    <td><%= link_to 'Show', [inventory.dealership, inventory] %></td>
+  <%if current_user && current_user.admin? %>
+    <td><%= link_to 'Edit', edit_dealership_inventory_path(inventory.dealership, inventory) %></td>
+   <%end%>
+  </tr>
+  <% end %>
+<% end %>
+</table>
 
 
 
