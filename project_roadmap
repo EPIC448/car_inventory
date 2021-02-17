@@ -208,14 +208,19 @@ run git push heroku
 
 ---if you face issues.
 run 'heroku logs'   to see where the issue are
-run 'heroku run rake db:migrate'    to create migration in Heroku
+run 'heroku  rake db:migrate'    to create migration in Heroku
+Gives some insight
+heroku run rails console
 
 To push changes into Heroku you 
  git commit  -am "stylesheet was added for buttons for all views"
 run 'git push -am "README updated to include Deployment for Heroku"
 run "git push heroku master " 
 
----- Phase 10 add Styling to the project -
+ Issue with ruby and different version
+ https://devcenter.heroku.com/articles/ruby-versions#your-ruby-version-is-x-but-your-gemfile-specified-y
+
+----√ Phase 10 add Styling to the project -
 
  Min 21:50
 
@@ -257,7 +262,7 @@ Video Stopeped at 45:37  Dealership Show page Bootstrap _complete
 
  Next fix the end pages. 
 
- ----------- Allow only admin to edit the files
+ ----------- √ Allow only admin to edit the files
   most in the Index and show and edit  files for dealership and  inventory
   <%= f.hidden_field :status, value: 'car-status'%>
 
@@ -276,3 +281,19 @@ cat /Users/omoogun/Desktop/Flatiron_Dev_files/ruby/car_inventory/car_inventory/t
 kill -9 18643
 
 then restart youtr server
+
+----- Rework Rspec_____
+ You will do this is sections. 
+ target model inventory.monthly_price
+ time = Time.now
+     time.month < then 12
+ self.price.nil?  should be falsey
+
+expect inventory.price .to eq(price - price * 0.02)
+
+
+
+------------ Reploy to Heroku----------
+
+
+---- Video Demo of the app. ------ 
