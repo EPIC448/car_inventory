@@ -293,7 +293,8 @@ expect inventory.price .to eq(price - price * 0.02)
 
 
 
------------- Reploy to Heroku----------
+------------ √Reploy to Heroku----------
 
 
----- Video Demo of the app. ------ 
+---- √Video Demo of the app. ------ 
+---- Github intergration ?  ------ 
