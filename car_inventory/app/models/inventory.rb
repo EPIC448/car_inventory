@@ -13,21 +13,19 @@ class Inventory < ApplicationRecord
     %w[Old old]
   ].freeze
 
-   
- 
+  # Assuming we start on month 1 january,
+  #  Price reduce by 2% every month
+
   def monthlyPrice
-    
     #  Price reduce by 2% every month
     time = Time.now
-    if time.month <= 12 && self.price != nil
-        for i in 1..time.month
-          self.price = self.price - (self.price * 0.02)
-          return self.price
-        end
+    if time.month <= 12 && !price.nil?
+      (1..time.month).each do |_i|
+        self.price = price - (price * 0.02)
+        return price
+      end
     else
-      return  self.price #inventory.price
+      price # inventory.price
     end
- end
-
-
+  end
 end
