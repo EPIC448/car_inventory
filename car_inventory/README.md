@@ -105,7 +105,7 @@ To omit excluded file when using rubocup,
 ---
 
 ---
-### Services (Heruko)
+### Services (Heroku)
 
 * Deployment instructions
 
@@ -140,6 +140,8 @@ run 'git push heroku main'
 
 
 -  [Heroku deployment](#https://tranquil-depths-24424.herokuapp.com/users/sign_in)
+-  [Dealership Inventory repo](#https://github.com/EPIC448/car_inventory/tree/main/car_inventory)
+
 
 [Back To The Top](#Dealership-Inventory-Managment-System)
 
@@ -147,10 +149,10 @@ run 'git push heroku main'
 ### References
 
 - [How to clone project to local machine](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
-- [Rubocop](https://rubocop.org/#:~:text=RuboCop%20is%20a%20Ruby%20code,community%2Ddriven%20Ruby%20Style%20Guide.)
-- [Rspec](https://relishapp.com/rspec/rspec-rails/v/4-0/docs/)
-- [Ruby](https://ruby-doc.org/)
-- [Heroku](https://devcenter.heroku.com/articles/getting-started-with-ruby#deploy-the-app)
+- [Rubocop docs](https://rubocop.org/#:~:text=RuboCop%20is%20a%20Ruby%20code,community%2Ddriven%20Ruby%20Style%20Guide.)
+- [Rspec docs](https://relishapp.com/rspec/rspec-rails/v/4-0/docs/)
+- [Ruby docs](https://ruby-doc.org/)
+- [Heroku docs](https://devcenter.heroku.com/articles/getting-started-with-ruby#deploy-the-app)
 
 
 ---

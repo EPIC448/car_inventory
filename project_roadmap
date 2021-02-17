@@ -5,20 +5,18 @@
 
   --- √ phase1
      set up user with Devise functionality
-       This include runing all the needed command
+     This include runing all the needed command
 
      set up admin on user which will be a boolean
      https://github.com/heartcombo/devise/wiki/How-To:-Add-an-Admin-Role
      option 2: on the link.
-     
-     To identify Admin you put any where
 
+    To identify Admin you put any where
      if current_user.admin?
        # do something
     end  
 
-    If the page could potentially not have a current_user set then:
-     
+    If the page could potentially not have a current_user set then: 
      if current_user.try(:admin?)
     # do something
    end
@@ -26,8 +24,7 @@
    use code to grant Admin access to current user
    current_user.update_attribute :admin, true
 
-
----- phase 2
+---- phase 2  Project layout
 
   Demo app | my app
 
@@ -36,8 +33,8 @@
    √ task(name,description:text status project:references)   - inventory =>  inventory of cars(carmodel,price:integer, status [old or new], dealership:references)
 
 √Set up the inventory for cars.  models,controller, views
- √Set up dealership models,controller, views
- √ Set up dealership models,controller, views
+√Set up dealership models,controller, views
+√ Set up dealership models,controller, views
 
 √Test that we are able to sign up. 
 
@@ -48,58 +45,37 @@ Demo sign-up account - admin
   Emails : john@example.com
  password: asfasf!123
 
- ------√ phase 3 Give admin the power to add, edit and destory inventory
+ -----√ phase 3 
+
+ Give admin the power to add, edit and destory inventory
    For admin, Include the instruction on how to do it in the terminal
     drop into  irb
-     and Change user boolean to admin. 
+    and Change user boolean to admin. 
       
       add if 
- <%if current_user && current_user.admin? %>
+   <%if current_user && current_user.admin? %>
   //do something
-
-<%end%>
+ <%end%>
+ 
  To change user to Admin in Terminal 
 
  Cd into you car_inventory file
    use the app by:
-    Sign-up or log_ing into a user account.
+  Sign-up or log_ing into a user account.
  
   In the car_inventory terminal
 
- ------- use code to grant Admin access to current user
-
-    run "rails c"
-   then run  "User.first" to make sure you are on the right user. 
-  
-  It shows
-  #<User id: 1, email: "bob@example.com", 
-  created_at: "2021-02-12 18:39:27.791451000 +0000", updated_at: "2021-02-12 18:39:27.791451000 +0000", admin: false> 
- 
-  run "@user = @user.admin = true "
-   run "@user.admin = true"
-    run "@user.save"
-    
-  current_user.update_attribute :admin, true
+ >> √ use code to grant Admin access to current user
 
   user and admin video. min 6:40
 
+----- √ phase 4  RECHECK user is working as ADMIN 
 
-
-
-
-
------------------------------------------------------phase 4 
      Stop video at 19:53.   have a little issue.
-      Edit button is giving me issues.  
+    Edit button is giving me issues.  
 
- 
   // Put in readme. 
-
   To change user to Admin in Terminal 
-
- Cd into you car_inventory file
-   use the app by:
-    Sign-up or log_ing into a user account.
  
   In the car_inventory terminal
 
@@ -112,35 +88,36 @@ Demo sign-up account - admin
  
   use code to grant Admin access to current user
   run "@user = @user.admin = true "
-   run "@user.admin = true"
-    run "@user.save"
+  run "@user.admin = true"
+  run "@user.save"
   ------  or 
   current_user.update_attribute :admin, true
---------------------------------------------Phasee 5  Install and Rails Rubocup
+
+---- √ phase 5  Install and Rails Rubocup
+
     ultimate sources rubocop  https://docs.rubocop.org/rubocop/1.0/cops_style.html#styledocumentation
     https://github.com/rubocop-hq/rubocop-rails
     https://github.com/rubocop-hq/rubocop
  exclude certain files
  https://docs.rubocop.org/rubocop/configuration.html#includingexcluding-files   
 
-    /// need a little configuration. 
+    / √ need a little configuration. 
     Readme:  When we run "rubocop add --force-exclusion"
      It help rubocop omit files saved in .rubocop.yml
   Readme:  Todo: Add all the comments as needed. 
   Then, explain how to run rubocop in exclude certain files.
   MAke sure to CD into the correct file 
 
-    -----------------------------------Phase 6 Install rspec--
+---- √ Phase 6 Install rspec--
      
       TDD testing  for inventory cars
       If we are using rspec on project we build  already.
- https://semaphoreci.com/community/tutorials/how-to-test-rails-models-with-rspec
+       https://semaphoreci.com/community/tutorials/how-to-test-rails-models-with-rspec
 
   ReadMe: Rails comes with it our natural test enviorments
 
-
      put rspec in the gemfile
-      run "bundle Install" 
+    run "bundle Install" 
      run "rails generate rspec:install"
       
       To run rspec 
@@ -154,49 +131,148 @@ Demo sign-up account - admin
 
 
 
---------------√ Price change -%20 at end of every month -
+---  Phase 7 Price change -%20 at end of every month -
 Get the end of the month
 https://stackoverflow.com/questions/14120661/get-last-day-of-the-month-in-ruby
 Created in the dealership model.
- Now we need to use it in out Show page with the prices.
+ Now we need to use it in our Show page with the prices.
   In video Project. See how 
-
   percent_complete was used in the Project model and inside the project 
     minutes: 49:10, or 1:03:05
 
-  For my project. end_of_month in dealership model
+For my project. end_of_month in dealership model
  Get the last of the month === https://www.rubyguides.com/2015/12/ruby-time/
 
- Note: Feb end in 29 days
-        june  30 days
-        rest of month has 31 days 
+ Note: 
+#   Price reduce by 2% every month. start at 100
+# month1 price = 100 -2% = 98
+# month2 price     = 98 - 2% = 96.04
+# month3 price     = 96.04 - 2% = 94.472
+#  (inventory price = inventory price - 2%) ^ time  (2ˆ4) =16 
+(1x2) =2
+(2x2) =4
+(4x2)=8
+(8x2)= 16
+ ruby 2**8 =  16 (to the power of)
+ 
+  Pesudo code for Rspec
+  # take in number of months
+  
+def price(price,n)
+   time = Time.new
+    puts time.month
+    #iterate over number of months & perform calulation 
+    #for i in 1..n  work like a while loop
+    for i in 1..time.month
+    price = price - (price * 0.02)
+    puts "Month #{i} price $#{price.round(2)}"
+end
+return price
 
-    method 
-     if date in a month is 29th or 30 or 31?
+end
+    
+    
+    price(100,12)
+     //>  working 
+     Month 1 price $98.0
+Month 2 price $96.04
 
-      reduce price by %20
+
+
+  may need to add a inventory.price.save
+Then, Remove the logic from the Views. and models. will still be
+ inventory.price
 
       https://www.geeksforgeeks.org/ruby-date-and-time/
 
   Readme: 
+   I just put in directly inside the views files for dealership and inventory
+
+Reconfigure the formula for month 2% reduction 
+
+
+
+
 
   
--------------------------------------Sign-out button... Look at devise files 
+---- √ phase 8 Sign-out button... Look at devise files 
 √Move the sign-out button. so be where we can use it all the time.
  Look back onto Your rails video
 
--------------- Deploy to Heroku------- 
+----- √ phase 9 Deploy to Heroku------- 
 https://devcenter.heroku.com/articles/getting-started-with-ruby#deploy-the-app
 After following steps in the Heroku link above
 run git remote  Heroku
 run git push --set-upstream heroku master 
 run git push heroku
 
-
-if you face issues.
+---if you face issues.
 run 'heroku logs'   to see where the issue are
 run 'heroku run rake db:migrate'    to create migration in Heroku
 
 To push changes into Heroku you 
+ git commit  -am "stylesheet was added for buttons for all views"
 run 'git push -am "README updated to include Deployment for Heroku"
 run "git push heroku master " 
+
+---- Phase 10 add Styling to the project -
+
+ Min 21:50
+
+ Extra code removed form  app/views/dealership/show.html.erb
+
+<hr>
+
+<h1>Listing inventories</h1>
+
+<table>
+  <tr>
+    <th>Carmodel</th>
+    <th>Price</th>
+    <th>Status</th>
+    <th>Dealership</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dealership.inventories.each do |inventory| %>
+<% if inventory.persisted? %>
+  <tr>
+    <td><%= inventory.carmodel %></td>
+    <%time = Time.new%>       
+    <td><%= inventory.price%></td>
+    <td><%= inventory.status %></td>
+    <td><%= inventory.dealership %></td>
+    <td><%= link_to 'Show', [inventory.dealership, inventory] %></td>
+  <%if current_user && current_user.admin? %>
+    <td><%= link_to 'Edit', edit_dealership_inventory_path(inventory.dealership, inventory) %></td>
+   <%end%>
+  </tr>
+  <% end %>
+<% end %>
+</table>
+
+Video Stopeped at 45:37  Dealership Show page Bootstrap _complete
+
+ Next fix the end pages. 
+
+ ----------- Allow only admin to edit the files
+  most in the Index and show and edit  files for dealership and  inventory
+  <%= f.hidden_field :status, value: 'car-status'%>
+
+ ----------------
+ Edit the models at 10:06
+
+
+-----  EXTRA Issues with Server---------
+When you get A server is already running.
+ Check /Users/omoogun/Desktop/Flatiron_Dev_files/ruby/car_inventory/car_inventory/tmp/pids/server.pid.
+
+kill -9 /Users/omoogun/Desktop/Flatiron_Dev_files/ruby/car_inventory/car_inventory/tmp/pids/server.pid
+cat /Users/omoogun/Desktop/Flatiron_Dev_files/ruby/car_inventory/car_inventory/tmp/pids/server.pid
+18643%                                  
+
+kill -9 18643
+
+then restart youtr server

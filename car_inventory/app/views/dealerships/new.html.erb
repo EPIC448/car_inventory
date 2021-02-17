@@ -1,5 +1,16 @@
-<h1>New Dealership</h1>
+ 
+<%= link_to 'Back', dealerships_path, class: 'btn btn-secondary mb-3' %>
+
+ <div class = "card">
+
+   <div class= "card-body">
+
+    <h2 class='card-title  mb-4'>
+    <span> New Dealership</span>
+  </h2>
+   
 
 <%= render 'form', dealership: @dealership %>
+</div>
+</div>
 
-<%= link_to 'Back', dealerships_path %>
