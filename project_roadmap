@@ -279,7 +279,7 @@ then restart youtr server
 
 ----- Rework Rspec_____
  You will do this is sections. 
- target model inventory.monthlyPrice
+ target model inventory.monthly_price
  time = Time.now
      time.month < then 12
  self.price.nil?  should be falsey
