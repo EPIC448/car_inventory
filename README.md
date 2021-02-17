@@ -101,6 +101,7 @@ To omit excluded file when using rubocup,
    runcommand "@user = @user.admin = true "
    run command "@user.admin = true"
    run command "@user.save"
+   
  ```
 ---
 
