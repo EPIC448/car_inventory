@@ -139,8 +139,8 @@ run 'git push heroku main'
 ```
 
 
--  [Heroku deployment](#https://tranquil-depths-24424.herokuapp.com/users/sign_in)
--  [Dealership Inventory repo](#https://github.com/EPIC448/car_inventory/tree/main/car_inventory)
+-  [Heroku deployment](https://tranquil-depths-24424.herokuapp.com/users/sign_in)
+-  [Dealership Inventory repo](https://github.com/EPIC448/car_inventory/tree/main/car_inventory)
 
 
 [Back To The Top](#Dealership-Inventory-Managment-System)
