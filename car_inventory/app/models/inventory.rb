@@ -19,7 +19,7 @@ class Inventory < ApplicationRecord
     
     #  Price reduce by 2% every month
     time = Time.now
-    if time.month <= 12
+    if time.month <= 12 && self.price != nil
         for i in 1..time.month
           self.price = self.price - (self.price * 0.02)
           return self.price
