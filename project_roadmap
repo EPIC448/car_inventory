@@ -209,11 +209,16 @@ run git push heroku
 ---if you face issues.
 run 'heroku logs'   to see where the issue are
 run 'heroku  rake db:migrate'    to create migration in Heroku
+Gives some insight
+heroku run rails console
 
 To push changes into Heroku you 
  git commit  -am "stylesheet was added for buttons for all views"
 run 'git push -am "README updated to include Deployment for Heroku"
 run "git push heroku master " 
+
+ Issue with ruby and different version
+ https://devcenter.heroku.com/articles/ruby-versions#your-ruby-version-is-x-but-your-gemfile-specified-y
 
 ----√ Phase 10 add Styling to the project -
 
