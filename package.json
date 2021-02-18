@@ -16,7 +16,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "start" : "node car_inventory.js",
+    "start" : "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
 }
 }
