@@ -8,11 +8,15 @@
     "@rails/webpacker": "5.2.1",
     "turbolinks": "^5.2.0",
     "engines": {
-        "node": "14.x"
+      "node": "14.x"
     }
   },
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.11.2"
-  }
+  },
+  "scripts": {
+    "start" : "node car_inventory.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+}
 }
