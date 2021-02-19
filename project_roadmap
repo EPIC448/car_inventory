@@ -220,6 +220,11 @@ run "git push heroku master "
  Issue with ruby and different version
  https://devcenter.heroku.com/articles/ruby-versions#your-ruby-version-is-x-but-your-gemfile-specified-y
 
+
+Name of my App on HEROKU> Now
+run  => heroku apps     
+=== samrey2018@gmail.com Apps
+      =>tranquil-depths-24424
 ----√ Phase 10 add Styling to the project -
 
  Min 21:50
@@ -293,7 +298,8 @@ expect inventory.price .to eq(price - price * 0.02)
 
 
 
------------- Reploy to Heroku----------
+------------ √Reploy to Heroku----------
 
 
----- Video Demo of the app. ------ 
+---- √Video Demo of the app. ------ 
+---- Github intergration ?  ------ 

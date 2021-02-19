@@ -21,9 +21,10 @@
 </p>
  <%if current_user && current_user.admin? %>
   <%= link_to 'Edit', edit_dealership_inventory_path(@inventory.dealership, @inventory) %> |
-<%end%>
-<%= link_to 'Back', dealership_inventories_path(@inventory.dealership) %>
+  <%= link_to 'Delete', dealership_inventory_path(@inventory.dealership, @inventory), method: :delete %> |
 
+<%end%>
 <hr>
+<%= link_to 'Back', dealership_inventories_path(@inventory.dealership) %>|
 <hr>
 <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
