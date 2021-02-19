@@ -1,15 +1,25 @@
 {
-  "name": "car-inventory",
+  "name": "my-package",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.2.1",
+    "cucumber": "^7.0.0-rc.0",
+    "engines": {
+      "node": "14.x",
+      "react-scripts": "^3.4.1"
+    },
+    "react-scripts": "^4.0.2",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "rspec"
   }
 }
