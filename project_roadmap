@@ -225,6 +225,13 @@ Name of my App on HEROKU> Now
 run  => heroku apps     
 === samrey2018@gmail.com Apps
       =>tranquil-depths-24424
+
+ Created a New  Heroku App. 
+
+ When deploy from branch. to submit to main. you 
+  run
+   "git push heroku heroku_v1:main"
+
 ----√ Phase 10 add Styling to the project -
 
  Min 21:50
