@@ -11,8 +11,25 @@ RSpec.describe Inventory, type: :model do
     inventory = Inventory.new(price: nil)
     expect(inventory).to_not be_valid
   end
-  it 'is valid with out STATUS which is a string' do
+
+  it 'check that price is not empty' do
     inventory = Inventory.new(status: nil)
-    expect(inventory).to_not be_valid
+    expect(inventory).to_not be == 'nil'
+  end
+
+  context 'reduce price by %20 at the end of each month' do
+    it 'Expect to monthly_price method in inventory model to return a price' do
+      inventory = Inventory.new
+      expect(inventory.monthly_price).to_not be == 'nil'
+    end
+
+    it 'Expect to monthly_price method  to return new price at the change of the month' do
+      time = Time.new
+
+      if time.month <= 12
+        inventory = Inventory.new
+        expect(inventory.monthly_price).eql?(inventory.price)
+      end
+    end
   end
 end

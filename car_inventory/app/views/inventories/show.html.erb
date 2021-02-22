@@ -7,12 +7,7 @@
 
 <p>
   <b>Price:</b>
-  <%time = Time.new%>
-    <%if time.day == 31 || time.day == 30 || time.day == 29%>
-    <%= @inventory.price = @inventory.price - @inventory.price * 0.02 %>
-    <%else%>
     <%= @inventory.price%>
-    <%end%>
 </p>
 
 <p>
@@ -26,9 +21,10 @@
 </p>
  <%if current_user && current_user.admin? %>
   <%= link_to 'Edit', edit_dealership_inventory_path(@inventory.dealership, @inventory) %> |
-<%end%>
-<%= link_to 'Back', dealership_inventories_path(@inventory.dealership) %>
+  <%= link_to 'Delete', dealership_inventory_path(@inventory.dealership, @inventory), method: :delete %> |
 
+<%end%>
 <hr>
+<%= link_to 'Back', dealership_inventories_path(@inventory.dealership) %>|
 <hr>
 <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
