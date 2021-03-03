@@ -7,15 +7,10 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.2.1",
     "cucumber": "^7.0.0-rc.0",
-<<<<<<< HEAD
-    "engines": {
-      "node": "14.x",
-      "react-scripts": "^3.4.1"
-    },
-=======
->>>>>>> heroku_v1
     "react-scripts": "^4.0.2",
-    "turbolinks": "^5.2.0"
+    "turbolinks": "^5.2.0",
+    "build": "babel src -d lib"
+
   },
   "version": "0.1.0",
   "devDependencies": {
