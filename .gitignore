@@ -190,3 +190,8 @@ Created in the dealership model.
   "bundle install"
   "rake db:migrate'
   "rails s  -- to launch server"
+
+
+  --------- As for the wrong number of argument issue---- 
+  possibel fix. 
+  https://github.com/bibendi/activerecord-postgres_enum/issues/40
