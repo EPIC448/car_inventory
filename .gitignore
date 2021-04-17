@@ -184,3 +184,9 @@ Created in the dealership model.
  Move the sign-out button. so be where we can use it all the time.
  Look back onto Your rails video
  Resources : https://stackoverflow.com/questions/26595874/i-want-make-push-and-get-error-src-refspec-master-does-not-match-any
+
+ ------------------- Issues with mimemagic---
+  Manual update in the gemlock file to latest update and run 
+  "bundle install"
+  "rake db:migrate'
+  "rails s  -- to launch server"
