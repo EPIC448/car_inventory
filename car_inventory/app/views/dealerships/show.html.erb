@@ -2,13 +2,14 @@
 <%= link_to 'Back', dealerships_path, class: 'btn btn-secondary mb-3' %>
 
 <div class ="card">
+
 <div class = "card-body">
        <h2 class='card-title d-flex justify-content-between mb-4'>
         <span> <%= @dealership.name%></span>
         
         <div> 
             <%= link_to 'Edit', edit_dealership_path(@dealership),class:'btn btn-light' %> 
-              <%= link_to 'Destroy',@dealership, method: :delete, class: 'btn btn-secondary', data: { confirm: 'Are you sure?' } %>
+              <%= button_to 'Destroy',@dealership, method: :delete, class: 'btn btn-secondary', data: { confirm: 'Are you sure?' } %>
 
         </div>
     </h2>
@@ -45,29 +46,29 @@
   <h6> Inventory</h6>
  <% @dealership.inventories.each do |inventory| %>
     <%if inventory.persisted?%>
-        <div class="card mb-4"> 
-          <div class="card-body"> 
-            <div class = "d-flex justify-content-between">
-          <span class="badge badge-<%= inventory.status %> mb-3"><%= inventory.status %></span>
+          <div class="card mb-4"> 
+            <div class="card-body"> 
+              <div class = "d-flex justify-content-between">
+              <span class="badge badge-<%= inventory.status %> mb-3"><%= inventory.status %></span>
+              <div>
+              
+              <td><%= link_to 'Edit', edit_dealership_inventory_path(inventory.dealership, inventory),class: 'btn btn-light' %></td>
+              
+                  <%if current_user && current_user.admin? %> 
+                          <td><%= button_to 'Destroy', [inventory.dealership, inventory], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-secondary' %></td>
+                  <% end %> 
 
-          <div>
-            <td><%= link_to 'Edit', edit_dealership_inventory_path(inventory.dealership, inventory),class: 'btn btn-light' %></td>
-            
-            <%if current_user && current_user.admin? %> 
-                    <td><%= link_to 'Destroy', [inventory.dealership, inventory], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-secondary' %></td>
-             <% end %> 
-
-             </div>
+              </div>
             </div>
 
-              <h5 class='card-title  mb-2'>
-               <span><%= inventory.carmodel%></span>
-              </h5>
-              <p> $<%= inventory.monthly_price%></p>
+                <h5 class='card-title  mb-2'>
+                <span><%= inventory.carmodel%></span>
+                </h5>
+                <p> $<%= inventory.monthly_price%></p>
 
+            </div>
           </div>
-        </div>
-       <%end%>
+        <%end%>
       <%end%>
   </div>
  </div>

@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'Back', dealership_inventories_path(@inventory.dealership),class: 'btn btn-secondary' %>
+
+
 <p>
   <b>Carmodel:</b>
   <%= @inventory.carmodel %>
@@ -20,11 +23,10 @@
   <%= @inventory.dealership %>
 </p>
  <%if current_user && current_user.admin? %>
-  <%= link_to 'Edit', edit_dealership_inventory_path(@inventory.dealership, @inventory) %> |
-  <%= button_to 'Delete', dealership_inventory_path(@inventory.dealership, @inventory), method: :delete %> |
+  <%= link_to 'Edit', edit_dealership_inventory_path(@inventory.dealership, @inventory), class: 'btn btn-secondary' %> |
+  <%= button_to 'Delete', dealership_inventory_path(@inventory.dealership, @inventory), method: :delete, class: 'btn btn-danger' %> |
 
 <%end%>
 <hr>
-<%= link_to 'Back', dealership_inventories_path(@inventory.dealership) %>|
 <hr>
-<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+<%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'btn btn-warning'  %>
