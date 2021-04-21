@@ -193,5 +193,15 @@ Created in the dealership model.
 
 
   --------- As for the wrong number of argument issue---- 
-  possibel fix. 
-  https://github.com/bibendi/activerecord-postgres_enum/issues/40
+  fix inside inventory controller was 
+  @inventory.update(inventory_params)
+      redirect_to(@inventory.dealership,notice: 'Inventory was successfully updated.')
+    -------- Worked great.-----
+
+    ---- Finish, Give it a simple background and a Log to the top left of the page.---
+      CarLoad.... Title.   
+
+    Car Logo-- https://cdn5.vectorstock.com/i/1000x1000/68/44/car-logo-with-circle-hand-colorful-logo-vector-22266844.jpg
+
+    backgroun-- gif -- https://media0.giphy.com/media/10cXff6xep02Na/giphy.gif
+     Great alternative== https://media.istockphoto.com/videos/the-sport-car-is-covered-with-a-white-cloth-on-a-black-background-the-video-id1176536301
