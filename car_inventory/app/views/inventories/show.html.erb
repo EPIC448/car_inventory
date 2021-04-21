@@ -21,7 +21,7 @@
 </p>
  <%if current_user && current_user.admin? %>
   <%= link_to 'Edit', edit_dealership_inventory_path(@inventory.dealership, @inventory) %> |
-  <%= link_to 'Delete', dealership_inventory_path(@inventory.dealership, @inventory), method: :delete %> |
+  <%= button_to 'Delete', dealership_inventory_path(@inventory.dealership, @inventory), method: :delete %> |
 
 <%end%>
 <hr>
