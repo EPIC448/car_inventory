@@ -211,3 +211,6 @@ Created in the dealership model.
 
       # <img src="/assets/logo.png" />
     # <%= video_tag "car_video.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
+
+
+    Css Logo creation. : https://www.w3schools.com/css/css3_images.asp
