@@ -1,26 +1,26 @@
 <%= form_with(model: [@inventory.dealership, @inventory]) do |f| %>
   <% if @inventory.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@inventory.errors.count, "error") %> prohibited this inventory from being saved:</h2>
+      <h2 class ="white_label"><%= pluralize(@inventory.errors.count, "error") %> prohibited this inventory from being saved:</h2>
 
       <ul>
       <% @inventory.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <li class="white_label"><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="form-group">
-    <%= f.label :carmodel %><br />
+    <%= f.label :carmodel,class: "white_label" %><br />
     <%= f.text_field :carmodel,class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :price %><br />
+    <%= f.label :price, class: "white_label" %><br />
     <%= f.number_field :price,class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :status %><br />
+    <%= f.label :status,class: "white_label" %><br />
     <%= f.select :status, Inventory::STATUS_OPTIONS,{}, class: 'form-control' %>
   </div>
   
