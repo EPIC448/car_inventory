@@ -6,16 +6,30 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-   <div class="container pt-5">
-   <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <%= video_tag "https://media.istockphoto.com/videos/3d-fiery-appearance-of-the-machine-video-id622481174", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
+
+   <div class="container">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    
+     
+     <div class="logo">
+        <img src="https://cdn5.vectorstock.com/i/1000x1000/68/44/car-logo-with-circle-hand-colorful-logo-vector-22266844.jpg" />
+    </div>
+
+    <br>
+     <%= yield %>
+    
     
     
     </div>

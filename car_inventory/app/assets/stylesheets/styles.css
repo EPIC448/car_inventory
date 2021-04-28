@@ -1,0 +1,27 @@
+.home_video {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    top: 0;
+    z-index: -2;
+   }
+
+  .container .home-video-wrapper {
+    height: 100vh;
+    display: flex;
+    }
+
+    h1.home {
+      color: white;
+    }
+
+    .logo img{
+        width: 50px
+       
+    }
+  .white_label{
+    color: whitesmoke;
+    }

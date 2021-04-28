@@ -205,3 +205,12 @@ Created in the dealership model.
 
     backgroun-- gif -- https://media0.giphy.com/media/10cXff6xep02Na/giphy.gif
      Great alternative== https://media.istockphoto.com/videos/the-sport-car-is-covered-with-a-white-cloth-on-a-black-background-the-video-id1176536301
+
+     Use resources to answer this qusestion : 
+     https://medium.com/swlh/add-a-background-video-to-your-landing-page-in-rails-5-7b9c459023bc
+
+      # <img src="/assets/logo.png" />
+    # <%= video_tag "car_video.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
+
+
+    Css Logo creation. : https://www.w3schools.com/css/css3_images.asp
