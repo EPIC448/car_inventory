@@ -99,7 +99,8 @@ To omit excluded file when using rubocup,
   created_at: "2021-02-12 18:39:27.791451000 +0000", updated_at: "2021-02-12 18:39:27.791451000 +0000", admin: false> " 
   
   Now we change the admin from false to true
-   runcommand "@user = @user.admin = true "
+   run command " @user = User.first"    ---> target the user you want to get. 
+   run command "@user = @user.admin = true "
    run command "@user.admin = true"
    run command "@user.save"
    
