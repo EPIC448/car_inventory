@@ -17,7 +17,7 @@ class Inventory < ApplicationRecord
   #  Price reduce by 2% every month
 
   def monthly_price
-    #  Price reduce by 2% every month
+    #  Price reduce by 2% every month start with the First Day of the Year. Jan 1st
     time = Time.now
     if time.month <= 12 && !price.nil?
       (1..time.month).each do |_i|
