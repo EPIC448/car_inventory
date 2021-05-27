@@ -80,7 +80,15 @@ To run Ruby code style checker(linter ) and formatter based on commmity-driven g
  ```
  run command  "rubocup"
 
-To omit excluded file when using rubocup,
+ To auto-correct
+ ```
+  run command "rubocop -A"
+ or
+run command "rubocop --auto-correct-all"
+
+ ```
+
+To omit excluded file when using rubocop,
 
  run command "rubocop add --force-exclusion"
 ```

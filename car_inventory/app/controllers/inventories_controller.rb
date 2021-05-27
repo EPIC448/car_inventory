@@ -36,7 +36,7 @@ class InventoriesController < ApplicationController
   # PUT dealerships/1/inventories/1
   def update
     if @inventory.update(inventory_params)
-      redirect_to(@inventory.dealership,notice: 'Inventory was successfully updated.')
+      redirect_to(@inventory.dealership, notice: 'Inventory was successfully updated.')
     else
       render action: 'edit'
     end
