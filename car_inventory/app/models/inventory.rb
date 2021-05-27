@@ -2,7 +2,6 @@
 
 require 'active_support/core_ext'
 
-# Inventory of all the cars that has being created
 class Inventory < ApplicationRecord
   belongs_to :dealership
   validates :status, inclusion: { in: %w[old new] }
