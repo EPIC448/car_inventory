@@ -108,7 +108,7 @@ To omit excluded file when using rubocop,
   
   Now we change the admin from false to true
    run command " @user = User.first"    ---> target the user you want to get. 
-   run command "@user = @user.admin = true "
+   run command "@user.admin = true "
    run command "@user.admin = true"
    run command "@user.save"
    
